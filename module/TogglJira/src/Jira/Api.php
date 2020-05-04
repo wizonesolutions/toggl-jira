@@ -14,7 +14,7 @@ class Api extends BaseApi
      */
     public function getUser(string $username): array
     {
-        $userDetails = $this->api(self::REQUEST_GET, "/rest/api/2/user", ['username' => $username]);
+        $userDetails = $this->api(self::REQUEST_GET, "/rest/api/2/myself", []);
 
         return $userDetails->getResult();
     }
